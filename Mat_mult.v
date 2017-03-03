@@ -11,11 +11,11 @@ module Mat_mult(clk, reset, A, B, Res);
   output[31:0] Res;
 
   //internal variables
-  reg[7:0] A1 [0:1][0:1];
-  reg[7:0] B1 [0:1][0:1];
+  reg[1:0] A1 [0:1][0:1];
+  reg[1:0] B1 [0:1][0:1];
   wire[15:0] product [0:1][0:1][0:1];
   wire[15:0] Res1 [0:1][0:1];
-  wire[31:0] Res;
+  wire[63:0] Res;
 
 
 
@@ -28,11 +28,14 @@ module Mat_mult(clk, reset, A, B, Res);
   genvar i, j, k;
   // parallal multipliers
   for(i=0;i < 2;i=i+1)
-    for(j=0;j < 2;j=j+1)
+    for(j=0;j < 2;j=j+1) begin
         for(k=0;k < 2;k=k+1) begin
           p_multiplier m1(clk, A1[i][k], B1[k][j], product[i][j][k]);
-          adder a1(product[i][j][k], Res1[i][j], Res1[i][j]);
         end
+
+//          adder a1(product[i][j][k], Res1[i][j], Res1[i][j]);
+          assign Res1[i][j] = product[i][j][0] + product[i][j][1];
+    end
   // multiplier tree
 
   assign Res = {Res1[0][0],Res1[0][1],Res1[1][0],Res1[1][1]};

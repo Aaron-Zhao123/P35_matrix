@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Thu Mar  2 21:48:47 2017
+# Process ID: 32682
+# Log file: /auto/homes/hc475/P35/P35_matrix/vivado.log
+# Journal file: /auto/homes/hc475/P35/P35_matrix/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /auto/homes/hc475/P35/P35_matrix/matrixMul/matrixMul.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/groups/ecad/xilinx/vivado_sdk_installed/Vivado/2015.1/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:11 . Memory (MB): peak = 5898.203 ; gain = 130.383 ; free physical = 345627 ; free virtual = 378538
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  2 21:50:38 2017...

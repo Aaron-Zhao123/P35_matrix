@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Thu Mar  2 14:42:19 2017
+# Process ID: 16014
+# Log file: /auto/homes/hc475/P35/P35_matrix/test/test.runs/synth_1/gray_code_counter_tb.vds
+# Journal file: /auto/homes/hc475/P35/P35_matrix/test/test.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source gray_code_counter_tb.tcl -notrace
+Command: synth_design -top gray_code_counter_tb -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-1223] The version limit for your license is '2017.01' and will expire in -30 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 949.145 ; gain = 146.457 ; free physical = 245 ; free virtual = 4647
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'gray_code_counter_tb' [/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter_tb.v:1]
+INFO: [Synth 8-638] synthesizing module 'gray_code_counter' [/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter.v:1]
+INFO: [Synth 8-226] default block is never used [/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter.v:30]
+INFO: [Synth 8-256] done synthesizing module 'gray_code_counter' (1#1) [/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter.v:1]
+ERROR: [Synth 8-462] no clock signal specified in event control [/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter_tb.v:23]
+ERROR: [Synth 8-285] failed synthesizing module 'gray_code_counter_tb' [/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter_tb.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1022.426 ; gain = 219.738 ; free physical = 170 ; free virtual = 4572
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  2 14:42:35 2017...
