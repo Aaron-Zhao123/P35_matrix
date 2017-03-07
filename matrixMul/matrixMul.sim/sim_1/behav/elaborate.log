@@ -1,0 +1,18 @@
+Vivado Simulator 2015.1
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /usr/groups/ecad/xilinx/vivado_sdk_installed/Vivado/2015.1/bin/unwrapped/lnx64.o/xelab -wto 08324d0b0c1449119d85b639381ce5ad --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Mat_mul_TB_behav xil_defaultlib.Mat_mul_TB xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-142] Res was previously declared with a different range [/auto/homes/hc475/P35/P35_matrix/Mat_mult.v:18]
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 8 for port dataa [/auto/homes/hc475/P35/P35_matrix/Mat_mult.v:33]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/auto/homes/hc475/P35/P35_matrix/matrixMul/matrixMul.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/auto/homes/hc475/P35/P35_matrix/matrixMul/matrixMul.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.p_multiplier
+Compiling module xil_defaultlib.Mat_mult_default
+Compiling module xil_defaultlib.Mat_mul_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Mat_mul_TB_behav

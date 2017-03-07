@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gray_code_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/auto/homes/hc475/P35/P35_matrix/gray_code_counter/gray_code_counter/gray_code_counter_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gray_code_counter_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/auto/homes/hc475/P35/P35_matrix/test/test.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
