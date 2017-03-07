@@ -19,6 +19,13 @@ module p_multiplier (clk, dataa, datab, res);
   reg[2*WIDTH-1: 0] M[MULT_LATENCY:0];
 
   integer i;
+  initial begin
+     for (i = 0; i < MULT_LATENCY+1; i = i+1)
+        M[i] <= 0;
+     rA <= 0;
+     rB <= 0;
+  end
+  
   always @ (posedge clk)
   begin
     rA <= dataa;

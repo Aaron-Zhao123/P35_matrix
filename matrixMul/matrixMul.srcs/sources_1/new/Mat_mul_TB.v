@@ -11,12 +11,12 @@ module Mat_mul_TB();
     );
 
   initial begin
-    $dumpfile("graycounter.vcd");
-    $dumpvars;
+//    $dumpfile("graycounter.vcd");
+//    $dumpvars;
     reset = 0;
     clk = 0;
-    A = 8'b00011011;
-    B = 8'b00011011;
+    A = 8'd1;
+    B = 8'd2;
     while (1) begin
       #5 clk = ~ clk;
     end

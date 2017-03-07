@@ -11,8 +11,8 @@ module Mat_mult(clk, reset, A, B, Res);
   output[31:0] Res;
 
   //internal variables
-  reg[1:0] A1 [0:1][0:1];
-  reg[1:0] B1 [0:1][0:1];
+  reg[WIDTH-1:0] A1 [0:1][0:1];
+  reg[WIDTH-1:0] B1 [0:1][0:1];
   wire[15:0] product [0:1][0:1][0:1];
   wire[15:0] Res1 [0:1][0:1];
   wire[63:0] Res;
@@ -21,8 +21,12 @@ module Mat_mult(clk, reset, A, B, Res);
 
   always @ * begin
   //Initialize the matrices-convert 1 D to 3D arrays
-    {A1[0][0],A1[0][1],A1[1][0],A1[1][1]} = A;
-    {B1[0][0],B1[0][1],B1[1][0],B1[1][1]} = B;
+    {A1[0][0],A1[0][1],A1[1][0],A1[1][1]} = {A, A, A, A};
+   // {A1[0][0],A1[0][1],A1[1][0],A1[1][1]} = {8'd1, 8'd2, 8'd3, 8'd4};
+
+    {B1[0][0],B1[0][1],B1[1][0],B1[1][1]} = {B, B, B, B};
+    //{B1[0][0],B1[0][1],B1[1][0],B1[1][1]} = {8'd1, 8'd2, 8'd3, 8'd4};
+
   end
 
   genvar i, j, k;
