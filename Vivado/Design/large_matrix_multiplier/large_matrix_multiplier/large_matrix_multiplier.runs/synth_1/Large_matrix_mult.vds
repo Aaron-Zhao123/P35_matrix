@@ -1,0 +1,383 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Mar  8 17:31:08 2017
+# Process ID: 28687
+# Current directory: /auto/homes/yaz21/P35_project/Design/large_matrix_multiplier/large_matrix_multiplier/large_matrix_multiplier.runs/synth_1
+# Command line: vivado -log Large_matrix_mult.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Large_matrix_mult.tcl
+# Log file: /auto/homes/yaz21/P35_project/Design/large_matrix_multiplier/large_matrix_multiplier/large_matrix_multiplier.runs/synth_1/Large_matrix_mult.vds
+# Journal file: /auto/homes/yaz21/P35_project/Design/large_matrix_multiplier/large_matrix_multiplier/large_matrix_multiplier.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Large_matrix_mult.tcl -notrace
+Command: synth_design -top Large_matrix_mult -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28692 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1084.547 ; gain = 158.082 ; free physical = 5550 ; free virtual = 6289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Large_matrix_mult' [/auto/homes/yaz21/P35_project/P35_matrix/Large_matrix_mult.v:3]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter LEGNTH bound to: 20 - type: integer 
+	Parameter PORT_LENGTH bound to: 160 - type: integer 
+	Parameter OUTPORT_LENGTH bound to: 320 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'p_multiplier' [/auto/homes/yaz21/P35_project/P35_matrix/multiplier.v:4]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter MULT_LATENCY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'p_multiplier' (1#1) [/auto/homes/yaz21/P35_project/P35_matrix/multiplier.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Large_matrix_mult' (2#1) [/auto/homes/yaz21/P35_project/P35_matrix/Large_matrix_mult.v:3]
+WARNING: [Synth 8-3331] design Large_matrix_mult has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1129.141 ; gain = 202.676 ; free physical = 5504 ; free virtual = 6243
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1129.141 ; gain = 202.676 ; free physical = 5503 ; free virtual = 6242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1137.082 ; gain = 210.617 ; free physical = 5503 ; free virtual = 6242
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1145.090 ; gain = 218.625 ; free physical = 5494 ; free virtual = 6236
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[2].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[3].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[4].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[5].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[6].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[7].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[8].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[9].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[10].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[11].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[12].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[13].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[14].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[15].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[16].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[17].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[18].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].parallel_mult[0].m1' (p_multiplier) to 'genblk1[0].parallel_mult[19].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[2].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[3].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[4].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[5].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[6].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[7].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[8].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[9].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[10].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[11].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[12].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[13].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[14].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[15].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[16].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[17].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[18].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[1].parallel_mult[0].m1' (p_multiplier) to 'genblk1[1].parallel_mult[19].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[2].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[3].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[4].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[5].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[6].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[7].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[8].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[9].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[10].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[11].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[12].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[13].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[14].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[15].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[16].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[17].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[18].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[2].parallel_mult[0].m1' (p_multiplier) to 'genblk1[2].parallel_mult[19].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[2].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[3].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[4].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[5].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[6].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[7].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[8].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[9].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[10].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[11].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[12].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[13].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[14].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[15].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[16].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[17].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[18].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[3].parallel_mult[0].m1' (p_multiplier) to 'genblk1[3].parallel_mult[19].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[2].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[3].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[4].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[5].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[6].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[7].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[8].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[9].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[10].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[11].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[12].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[13].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[14].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[15].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[16].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[17].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[18].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[4].parallel_mult[0].m1' (p_multiplier) to 'genblk1[4].parallel_mult[19].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[5].parallel_mult[0].m1' (p_multiplier) to 'genblk1[5].parallel_mult[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[5].parallel_mult[0].m1' (p_multiplier) to 'genblk1[5].parallel_mult[2].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[5].parallel_mult[0].m1' (p_multiplier) to 'genblk1[5].parallel_mult[3].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[5].parallel_mult[0].m1' (p_multiplier) to 'genblk1[5].parallel_mult[4].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[5].parallel_mult[0].m1' (p_multiplier) to 'genblk1[5].parallel_mult[5].m1'
+INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  21 Input     16 Bit       Adders := 20    
++---Registers : 
+	               16 Bit    Registers := 20    
+	                8 Bit    Registers := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Large_matrix_mult 
+Detailed RTL Component Info : 
++---Adders : 
+	  21 Input     16 Bit       Adders := 20    
+Module p_multiplier 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design Large_matrix_mult has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1253.527 ; gain = 327.062 ; free physical = 5365 ; free virtual = 6131
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1253.527 ; gain = 327.062 ; free physical = 5365 ; free virtual = 6131
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1278.418 ; gain = 351.953 ; free physical = 5339 ; free virtual = 6105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.422 ; gain = 351.957 ; free physical = 5338 ; free virtual = 6104
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.422 ; gain = 351.957 ; free physical = 5339 ; free virtual = 6105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.422 ; gain = 351.957 ; free physical = 5339 ; free virtual = 6105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.422 ; gain = 351.957 ; free physical = 5339 ; free virtual = 6105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.422 ; gain = 351.957 ; free physical = 5338 ; free virtual = 6104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.422 ; gain = 351.957 ; free physical = 5338 ; free virtual = 6104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+--------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+--------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Large_matrix_mult | genblk1[0].parallel_mult[0].m1/M_reg[3][3] | 3      | 20    | NO           | NO                 | YES               | 20     | 0       | 
++------------------+--------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |  1000|
+|3     |LUT1   |   500|
+|4     |LUT2   |  2620|
+|5     |LUT3   |   880|
+|6     |LUT4   |  1260|
+|7     |LUT5   |    60|
+|8     |LUT6   |   800|
+|9     |SRL16E |    20|
+|10    |FDRE   |  1560|
+|11    |IBUF   |   321|
+|12    |OBUF   |   320|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------+----------------+------+
+|      |Instance                            |Module          |Cells |
++------+------------------------------------+----------------+------+
+|1     |top                                 |                |  9342|
+|2     |  \genblk1[0].parallel_mult[0].m1   |p_multiplier    |   345|
+|3     |  \genblk1[10].parallel_mult[0].m1  |p_multiplier_0  |   345|
+|4     |  \genblk1[11].parallel_mult[0].m1  |p_multiplier_1  |   345|
+|5     |  \genblk1[12].parallel_mult[0].m1  |p_multiplier_2  |   345|
+|6     |  \genblk1[13].parallel_mult[0].m1  |p_multiplier_3  |   345|
+|7     |  \genblk1[14].parallel_mult[0].m1  |p_multiplier_4  |   345|
+|8     |  \genblk1[15].parallel_mult[0].m1  |p_multiplier_5  |   345|
+|9     |  \genblk1[16].parallel_mult[0].m1  |p_multiplier_6  |   345|
+|10    |  \genblk1[17].parallel_mult[0].m1  |p_multiplier_7  |   345|
+|11    |  \genblk1[18].parallel_mult[0].m1  |p_multiplier_8  |   345|
+|12    |  \genblk1[19].parallel_mult[0].m1  |p_multiplier_9  |   345|
+|13    |  \genblk1[1].parallel_mult[0].m1   |p_multiplier_10 |   345|
+|14    |  \genblk1[2].parallel_mult[0].m1   |p_multiplier_11 |   345|
+|15    |  \genblk1[3].parallel_mult[0].m1   |p_multiplier_12 |   345|
+|16    |  \genblk1[4].parallel_mult[0].m1   |p_multiplier_13 |   345|
+|17    |  \genblk1[5].parallel_mult[0].m1   |p_multiplier_14 |   345|
+|18    |  \genblk1[6].parallel_mult[0].m1   |p_multiplier_15 |   345|
+|19    |  \genblk1[7].parallel_mult[0].m1   |p_multiplier_16 |   345|
+|20    |  \genblk1[8].parallel_mult[0].m1   |p_multiplier_17 |   345|
+|21    |  \genblk1[9].parallel_mult[0].m1   |p_multiplier_18 |   345|
++------+------------------------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.422 ; gain = 351.957 ; free physical = 5338 ; free virtual = 6104
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1278.422 ; gain = 265.875 ; free physical = 5338 ; free virtual = 6104
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1278.426 ; gain = 351.961 ; free physical = 5340 ; free virtual = 6106
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1321 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+116 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1386.531 ; gain = 390.504 ; free physical = 5272 ; free virtual = 6052
+INFO: [Common 17-1381] The checkpoint '/auto/homes/yaz21/P35_project/Design/large_matrix_multiplier/large_matrix_multiplier/large_matrix_multiplier.runs/synth_1/Large_matrix_mult.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1410.602 ; gain = 0.000 ; free physical = 5264 ; free virtual = 6047
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  8 17:31:46 2017...

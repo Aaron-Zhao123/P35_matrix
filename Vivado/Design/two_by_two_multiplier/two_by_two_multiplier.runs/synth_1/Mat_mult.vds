@@ -1,0 +1,271 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Mar  7 16:33:14 2017
+# Process ID: 9720
+# Current directory: /auto/homes/yaz21/P35_project/Design/two_by_two_multiplier/two_by_two_multiplier.runs/synth_1
+# Command line: vivado -log Mat_mult.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Mat_mult.tcl
+# Log file: /auto/homes/yaz21/P35_project/Design/two_by_two_multiplier/two_by_two_multiplier.runs/synth_1/Mat_mult.vds
+# Journal file: /auto/homes/yaz21/P35_project/Design/two_by_two_multiplier/two_by_two_multiplier.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Mat_mult.tcl -notrace
+Command: synth_design -top Mat_mult -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9731 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1084.547 ; gain = 158.082 ; free physical = 3934 ; free virtual = 5872
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Mat_mult' [/auto/homes/yaz21/P35_project/P35_matrix/Mat_mult.v:3]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'p_multiplier' [/auto/homes/yaz21/P35_project/P35_matrix/multiplier.v:4]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter MULT_LATENCY bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'p_multiplier' (1#1) [/auto/homes/yaz21/P35_project/P35_matrix/multiplier.v:4]
+WARNING: [Synth 8-5856] 3D RAM A1_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM B1_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'Mat_mult' (2#1) [/auto/homes/yaz21/P35_project/P35_matrix/Mat_mult.v:3]
+WARNING: [Synth 8-3331] design Mat_mult has unconnected port reset
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1126.141 ; gain = 199.676 ; free physical = 3892 ; free virtual = 5831
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1126.141 ; gain = 199.676 ; free physical = 3892 ; free virtual = 5830
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1134.082 ; gain = 207.617 ; free physical = 3892 ; free virtual = 5830
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1142.090 ; gain = 215.625 ; free physical = 3884 ; free virtual = 5822
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'genblk1[0].genblk1[0].genblk1[0].m1' (p_multiplier) to 'genblk1[0].genblk1[0].genblk1[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].genblk1[0].genblk1[0].m1' (p_multiplier) to 'genblk1[0].genblk1[1].genblk1[0].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].genblk1[0].genblk1[0].m1' (p_multiplier) to 'genblk1[0].genblk1[1].genblk1[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].genblk1[0].genblk1[0].m1' (p_multiplier) to 'genblk1[1].genblk1[0].genblk1[0].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].genblk1[0].genblk1[0].m1' (p_multiplier) to 'genblk1[1].genblk1[0].genblk1[1].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].genblk1[0].genblk1[0].m1' (p_multiplier) to 'genblk1[1].genblk1[1].genblk1[0].m1'
+INFO: [Synth 8-223] decloning instance 'genblk1[0].genblk1[0].genblk1[0].m1' (p_multiplier) to 'genblk1[1].genblk1[1].genblk1[1].m1'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 4     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Mat_mult 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 4     
+Module p_multiplier 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design Mat_mult has unconnected port reset
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].genblk1[0].m1/M_reg[1][15]) is unused and will be removed from module Mat_mult.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].genblk1[0].m1/M_reg[2][15]) is unused and will be removed from module Mat_mult.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].genblk1[0].m1/M_reg[3][15]) is unused and will be removed from module Mat_mult.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1235.191 ; gain = 308.727 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1235.191 ; gain = 308.727 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1236.074 ; gain = 309.609 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.078 ; gain = 309.613 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.078 ; gain = 309.613 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.078 ; gain = 309.613 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.078 ; gain = 309.613 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.078 ; gain = 309.613 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.078 ; gain = 309.613 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Mat_mult    | genblk1[0].genblk1[0].genblk1[0].m1/M_reg[3][3] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     9|
+|3     |LUT2   |    22|
+|4     |LUT3   |     4|
+|5     |LUT4   |    18|
+|6     |LUT5   |     3|
+|7     |LUT6   |    43|
+|8     |SRL16E |     1|
+|9     |FDRE   |    75|
+|10    |IBUF   |    17|
+|11    |OBUF   |    64|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------------+-------------+------+
+|      |Instance                                |Module       |Cells |
++------+----------------------------------------+-------------+------+
+|1     |top                                     |             |   257|
+|2     |  \genblk1[0].genblk1[0].genblk1[0].m1  |p_multiplier |   175|
++------+----------------------------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.078 ; gain = 309.613 ; free physical = 3786 ; free virtual = 5724
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1236.078 ; gain = 222.531 ; free physical = 3786 ; free virtual = 5724
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1236.082 ; gain = 309.617 ; free physical = 3788 ; free virtual = 5726
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1361.188 ; gain = 365.160 ; free physical = 3713 ; free virtual = 5651
+INFO: [Common 17-1381] The checkpoint '/auto/homes/yaz21/P35_project/Design/two_by_two_multiplier/two_by_two_multiplier.runs/synth_1/Mat_mult.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1385.258 ; gain = 0.000 ; free physical = 3713 ; free virtual = 5651
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  7 16:33:43 2017...
