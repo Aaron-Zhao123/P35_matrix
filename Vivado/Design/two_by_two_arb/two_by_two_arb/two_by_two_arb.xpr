@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="/auto/homes/yaz21/P35_project/Design/two_by_two_arb/two_by_two_arb/two_by_two_arb.xpr">
+<Project Version="7" Minor="17" Path="/auto/homes/yaz21/P35_project/P35_matrix/Vivado/Design/two_by_two_arb/two_by_two_arb/two_by_two_arb.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fc706dd9202742fc9823eda99a347f2d"/>
@@ -19,6 +19,8 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/two_by_two_arb_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/mult_arb_two_by_two_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/two_by_two_arb_ip_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/two_by_two_arb_ip_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
@@ -30,7 +32,7 @@
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/two_by_two_arb.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="4"/>
+    <Option Name="WTXSimLaunchSim" Val="6"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -53,14 +55,21 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../P35_matrix/multiplier.v">
+      <File Path="$PPRDIR/../../../../multiplier.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../P35_matrix/Mat_arb_mult.v">
+      <File Path="$PPRDIR/../../../../Mat_arb_mult.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Mat_arb_mult_tb.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -69,7 +78,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Mat_arb_mult"/>
+        <Option Name="TopModule" Val="Mat_mul_TB"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -83,7 +92,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Mat_arb_mult"/>
+        <Option Name="TopModule" Val="Mat_mul_TB"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

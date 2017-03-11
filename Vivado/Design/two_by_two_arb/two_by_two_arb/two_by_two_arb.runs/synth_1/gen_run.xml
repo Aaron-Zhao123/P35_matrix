@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1489080303">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1489173401">
+  <File Type="RDS-PROPCONSTRS" Name="Mat_arb_mult_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="Mat_arb_mult_utilization_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Mat_arb_mult.vds"/>
   <File Type="VDS-TIMING-PB" Name="Mat_arb_mult_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="Mat_arb_mult.tcl"/>
   <File Type="VDS-TIMINGSUMMARY" Name="Mat_arb_mult_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Mat_arb_mult.dcp"/>
   <File Type="RDS-UTIL-PB" Name="Mat_arb_mult_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Mat_arb_mult_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Mat_arb_mult_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Mat_arb_mult.vds"/>
-  <File Type="PA-TCL" Name="Mat_arb_mult.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../../P35_matrix/multiplier.v">
+    <File Path="$PPRDIR/../../../../multiplier.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../P35_matrix/Mat_arb_mult.v">
+    <File Path="$PPRDIR/../../../../Mat_arb_mult.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

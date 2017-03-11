@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-| Date         : Thu Mar  9 17:25:32 2017
-| Host         : acs-23.cl.cam.ac.uk running 64-bit Ubuntu 14.04.5 LTS
+| Date         : Fri Mar 10 19:17:11 2017
+| Host         : acs-05.cl.cam.ac.uk running 64-bit Ubuntu 14.04.5 LTS
 | Command      : report_utilization -file Mat_arb_mult_utilization_synth.rpt -pb Mat_arb_mult_utilization_synth.pb
 | Design       : Mat_arb_mult
 | Device       : 7z010clg400-1

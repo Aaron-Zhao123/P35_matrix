@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="two_by_two_arb_djgboard_two_by_two_arb_0_0_synth_1" LaunchDir="/auto/homes/yaz21/P35_project/P35_matrix/Vivado/Integrated/two_by_two_arb_integrated/two_by_two_arb_integrated/two_by_two_arb_integrated.runs/two_by_two_arb_djgboard_two_by_two_arb_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/auto/homes/yaz21/P35_project/P35_matrix/Vivado/Integrated/two_by_two_arb_integrated/two_by_two_arb_integrated/two_by_two_arb_integrated.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="two_by_two_arb_djgboard_two_by_two_arb_0_0_synth_1"/>
+	</Run>
+</Runs>
+

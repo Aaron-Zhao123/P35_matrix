@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/auto/homes/yaz21/P35_project/Design/two_by_two_arb/two_by_two_arb/two_by_two_arb.runs/synth_1'
+HD_PWD='/auto/homes/yaz21/P35_project/P35_matrix/Vivado/Design/two_by_two_arb/two_by_two_arb/two_by_two_arb.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

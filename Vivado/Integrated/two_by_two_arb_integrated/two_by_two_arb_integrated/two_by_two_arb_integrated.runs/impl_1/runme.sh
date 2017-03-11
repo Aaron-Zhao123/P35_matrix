@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/auto/homes/yaz21/P35_project/Integrated/two_by_two_arb_integrated/two_by_two_arb_integrated/two_by_two_arb_integrated.runs/impl_1'
+HD_PWD='/auto/homes/yaz21/P35_project/P35_matrix/Vivado/Integrated/two_by_two_arb_integrated/two_by_two_arb_integrated/two_by_two_arb_integrated.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,7 +37,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
-EAStep vivado -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+/bin/touch .init_design.begin.rst
+EAStep vivado -log two_by_two_arb_djgboard_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source two_by_two_arb_djgboard_wrapper.tcl -notrace
 
 

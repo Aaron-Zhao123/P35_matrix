@@ -13,7 +13,7 @@ module Mat_mul_TB();
   initial begin
 //    $dumpfile("graycounter.vcd");
 //    $dumpvars;
-    reset = 0;
+    reset = 1;
     clk = 0;
     A = 32'h01020304;
     B = 32'h04030201;
@@ -23,7 +23,7 @@ module Mat_mul_TB();
   end
   
   always @ (negedge clk) begin
-    async_reset <= 0;
+    async_reset <= 1;
   end
 
   initial

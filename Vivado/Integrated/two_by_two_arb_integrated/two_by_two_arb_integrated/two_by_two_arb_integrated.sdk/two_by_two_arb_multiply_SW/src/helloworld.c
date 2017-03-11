@@ -57,11 +57,6 @@ int main()
 
 		read_result3 = *((unsigned long *) virt_addr3);
 		read_result4 = *((unsigned long *) virt_addr4);
-
-//		if(debug) printf("Value at address 0x%X (%p): 0x%X\n", MEM_BASE+8, virt_addr3, read_result3);
-//		if(debug) printf("Value at address 0x%X (%p): 0x%X\n", MEM_BASE+12, virt_addr4, read_result4);
-
-
 	}
 
 

@@ -32,7 +32,7 @@ module Mat_arb_mult(clk, reset, A, B, Res);
   for(i=0;i < 2;i=i+1)
     for(j=0;j < 2;j=j+1) begin
         for(k=0;k < 2;k=k+1) begin
-          p_multiplier m1(clk, A1[i][k], B1[k][j], product[i][j][k]);
+          p_multiplier m1(clk, reset, A1[i][k], B1[k][j], product[i][j][k]);
         end
 
 //          adder a1(product[i][j][k], Res1[i][j], Res1[i][j]);
