@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "zynq_utils.h"
+#define u32 unsigned int
+#define u64 unsigned long long
+
+#include "matrix.h"
 
 #define MEM_BASE 0x43c00000
 #define MATA	0x00
@@ -18,9 +21,6 @@
 #define init(argc, argv) bm_init(argc, argv)
 #define deinit() bm_deinit()
 #endif
-
-#define u64 unsigned long long
-#define u32 unsigned int
 
 u32 matA, matB, iters;
 u32 lRes, hRes;
