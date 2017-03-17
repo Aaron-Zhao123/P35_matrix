@@ -31,13 +31,13 @@ matMul.dis: matMul
 
 run: matMul
 ifeq ($(USE_ENERGYSHIM),1)
-	./matMul l=1000000 -- 0x01020304 0x01000001 | tee identity.test
-	./matMul l=1000000 -- 0x01020304 0x02000002 | tee double.test
-	./matMul l=1000000 -- 0xBA5EBA11 0xBEEFBABE | tee hard.test
+	./matMul l=10000000 -- 0x01020304 0x01000001 | tee identity.test
+	./matMul l=10000000 -- 0x01020304 0x02000002 | tee double.test
+	./matMul l=10000000 -- 0xBA5EBA11 0xBEEFBABE | tee hard.test
 else
-	./matMul 0x01020304 0x01000001 1000000 | tee identity.test
-	./matMul 0x01020304 0x02000002 1000000 | tee double.test
-	./matMul 0xBA5EBA11 0xBEEFBABE 1000000 | tee hard.test
+	./matMul 0x01020304 0x01000001 10000000 | tee identity.test
+	./matMul 0x01020304 0x02000002 10000000 | tee double.test
+	./matMul 0xBA5EBA11 0xBEEFBABE 10000000 | tee hard.test
 endif
 	@echo "done"
 
