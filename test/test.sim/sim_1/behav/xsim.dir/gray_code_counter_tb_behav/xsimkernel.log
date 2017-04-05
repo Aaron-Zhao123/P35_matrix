@@ -1,7 +1,0 @@
-Running: xsim.dir/gray_code_counter_tb_behav/xsimk -simmode gui -wdb gray_code_counter_tb_behav.wdb -simrunnum 0 -socket 52847
-Design successfully loaded
-Design Loading Memory Usage: 106892 KB (Peak: 106920 KB)
-Design Loading CPU Usage: 50 ms
-Simulation completed
-Simulation Memory Usage: 180628 KB (Peak: 246164 KB)
-Simulation CPU Usage: 60 ms
