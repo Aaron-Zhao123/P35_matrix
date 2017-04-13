@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-#define u32 unsigned int
-#define u64 unsigned long long
+#define u8 uint8_t
+#define u16 uint16_t
+#define u32 uint32_t
+#define u64 uint64_t
+#define ptr_t uintptr_t
 
 #include "zynq_utils.h"
 
@@ -24,7 +28,7 @@
 
 u32 matA, matB, iters;
 u32 lRes, hRes;
-void* mem_base;
+ptr_t mem_base;
 
 int init(int argc, const char* argv[])
 {
@@ -47,7 +51,7 @@ int init(int argc, const char* argv[])
 	matB = strtoul(argv[2], NULL, 16);
 	
 	printf("Mapping memory\n");
-	mem_base = map_page(MEM_BASE);
+	mem_base = (ptr_t) map_page(MEM_BASE);
 
 	if (mem_base <= 0)
 		return 1;
@@ -77,6 +81,7 @@ int init(int argc, const char* argv[])
 	printf("matrix B:\n%d %d\n%d %d\n\n", matB & 0xFF, matB>>8 & 0xFF, matB>>16 & 0xFF, matB>>24 & 0xFF);
 
 	printf("iterations: %u\n", iters);
+	return 0;
 }
 
 int deinit()
@@ -91,7 +96,7 @@ int deinit()
 #endif
 
 	printf("Unmapping memory\n");
-	unmap_page(mem_base);
+	unmap_page((void*) mem_base);
 
 	printf("\n");	
 	return 0;
