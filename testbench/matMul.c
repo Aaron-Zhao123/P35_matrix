@@ -10,13 +10,16 @@
 
 #include "zynq_utils.h"
 
+// Memory pointers
 #define MEM_BASE 0x43c00000
 #define MAT	0x00
 #define RES	0x04
 
+// Define write and read commands
 #define WRITE(offset, x) (*((u32*)(mem_base+offset)) = x)
 #define READ(offset) (*((u32*)(mem_base+offset)))
 
+// Energyshim entry points
 #ifdef USE_ENERGYSHIM
 #include "energyshim.h"
 #define main(argc, argv) bm_main(argc, argv)
@@ -46,7 +49,7 @@ int init(int argc, const char* argv[])
 	}
 
 	mat = strtoul(argv[1], NULL, 16);
-	
+
 	printf("Mapping memory\n");
 	mem_base = (ptr_t) map_page(MEM_BASE);
 
@@ -73,21 +76,6 @@ int init(int argc, const char* argv[])
 
 int deinit()
 {
-	printf("res = 0x%08x\n", res);
-	printf("res in matrix form:\n%d %d\n%d %d\n", res & 0xFF, res>>8 & 0xFF, res>>16 & 0xFF, res>>24 & 0xFF); 
-	printf("\n");
-
-#if defined(__linux__) && defined(FUCK_WITH_INTERRUPTS)
-	printf("Turning on interrupts\n");
-	zynq_enable_interrupts();
-#endif
-
-	printf("Unmapping memory\n");
-	unmap_page((void*) mem_base);
-
-	printf("\n");	
-	return 0;
-	
 	printf("res = 0x%08x\n", res);
 	printf("res in matrix form:\n%d %d\n%d %d\n", res & 0xFF, res>>8 & 0xFF, res>>16 & 0xFF, res>>24 & 0xFF); 
 	printf("\n");
