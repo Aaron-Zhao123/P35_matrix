@@ -10,22 +10,24 @@
 
 #include "zynq_utils.h"
 
+// Memory pointers
 #define MEM_BASE 0x43c00000
 #define MATA	0x00
 #define MATB	0x04
 #define RES_LO	0x08
 #define RES_HI	0x0C
 
+// Define write and read commands
 #define WRITE(offset, x) (*((u32*)(mem_base+offset)) = x)
 #define READ(offset) (*((u32*)(mem_base+offset)))
 
+// Energyshim entry points
 #ifdef USE_ENERGYSHIM
 #include "energyshim.h"
 #define main(argc, argv) bm_main(argc, argv)
 #define init(argc, argv) bm_init(argc, argv)
 #define deinit() bm_deinit()
 #endif
-
 u32 matA, matB, iters;
 u32 lRes, hRes;
 ptr_t mem_base;
@@ -49,7 +51,7 @@ int init(int argc, const char* argv[])
 
 	matA = strtoul(argv[1], NULL, 16);
 	matB = strtoul(argv[2], NULL, 16);
-	
+
 	printf("Mapping memory\n");
 	mem_base = (ptr_t) map_page(MEM_BASE);
 
