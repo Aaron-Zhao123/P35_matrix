@@ -13,7 +13,7 @@
 // Memory pointers
 #define MEM_BASE 0x43c00000
 #define MAT	0x00
-#define RES	0x04
+#define RES	0x0C
 
 // Define write and read commands
 #define WRITE(offset, x) (*((u32*)(mem_base+offset)) = x)
